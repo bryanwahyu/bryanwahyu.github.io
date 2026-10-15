@@ -48,7 +48,7 @@
             <div class="divider divider-light" aria-hidden="true">
                 <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
             </div>
-            <p class="masthead-subheading">Backend Engineer · Go · Distributed Systems · Game Server Architecture</p>
+            <p class="masthead-subheading">Senior Backend Engineer · Go · Distributed Systems · Security</p>
         </div>
     </header>
 
@@ -117,7 +117,7 @@
                         <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
                     </button>
                     <template>
-                        <p>Resumable bulk email sender with a bounded worker pool, rate limiting, retry and checkpoint resume. Benchmarked at 1M recipients.</p>
+                        <p>Resumable bulk email sender with a bounded worker pool, rate limiting, dedup, a dead-letter queue and checkpoint resume. Benchmarked at 1 million emails in 21.1 seconds against a mock backend; after a kill -9 at 446,574 sends, a rerun resumed from the checkpoint with no duplicates.</p>
                         <p class="stack">Go · SMTP · SES</p>
                         <a href="https://github.com/bryanwahyu/emailblast" target="_blank" rel="noopener">View emailblast on GitHub</a>
                     </template>
@@ -195,7 +195,7 @@
                         <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
                     </button>
                     <template>
-                        <p>Threat detection engine that spots brute force, SQL injection and XSS in incoming logs and blocks the source at the firewall automatically.</p>
+                        <p>Threat detection engine that spots brute force, SQL injection, XSS, path traversal, scanners and HTTP floods. Ingests from journald, file tailing and HTTP, and responds automatically through UFW, nftables or Cloudflare. Prometheus metrics, offline-first storage to MinIO.</p>
                         <p class="stack">Go</p>
                         <a href="https://github.com/bryanwahyu/mini-siem-api" target="_blank" rel="noopener">View mini-siem-api on GitHub</a>
                     </template>
@@ -291,10 +291,11 @@
                 <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
             </div>
             <div class="about-cols">
-                <p class="lead">I build backend systems from scratch: game servers, security automation tools, and platforms for social impact.</p>
-                <p class="lead">Right now I'm focused on real-time multiplayer infrastructure, AI orchestration, and accessibility tech in Indonesia, including <a href="https://disabilitasku.id" target="_blank" rel="noopener">disabilitasku.id</a>, a platform for people with disabilities.</p>
+                <p class="lead">I've been writing backends since 2014, starting with game servers while studying Computer Science at Udayana University. Today I work mostly in Go on distributed systems, with a security background in SOC tooling, a SIEM for a regional government, and a DevSecOps scanning platform.</p>
+                <p class="lead">Since 2022 I run Sarana Technology and work as principal engineer or tech lead for product, AI and public-sector clients. I'm also the founder of <a href="https://disabilitasku.id" target="_blank" rel="noopener">disabilitasku.id</a>, an accessibility platform for people with disabilities in Indonesia.</p>
             </div>
             <div class="about-cta">
+                <a class="btn-outline" href="assets/cv/Bryan_Krishnaputra_CV_Backend.pdf" download>Download CV</a>
                 <a class="btn-outline" href="https://github.com/bryanwahyu" target="_blank" rel="noopener">See my code on GitHub</a>
             </div>
         </div>
@@ -313,20 +314,32 @@
                     <dd><span class="chip chip-strong">Go</span><span class="chip">TypeScript / Node.js</span><span class="chip">Python</span><span class="chip">PHP</span></dd>
                 </div>
                 <div class="skill-row">
-                    <dt>Infra</dt>
-                    <dd><span class="chip">Docker</span><span class="chip">AWS (ECR, ECS)</span><span class="chip">Kubernetes</span><span class="chip">NATS JetStream</span><span class="chip">GitHub Actions</span><span class="chip">GameCI</span></dd>
+                    <dt>Architecture</dt>
+                    <dd><span class="chip">Microservices</span><span class="chip">DDD</span><span class="chip">Clean Architecture</span><span class="chip">Event-driven</span><span class="chip">CQRS</span><span class="chip">SAGA</span><span class="chip">Circuit Breaker</span></dd>
                 </div>
                 <div class="skill-row">
                     <dt>Data</dt>
-                    <dd><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Cassandra / ScyllaDB</span><span class="chip">MySQL</span></dd>
+                    <dd><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">ScyllaDB / Cassandra</span><span class="chip">MongoDB</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Messaging</dt>
+                    <dd><span class="chip">gRPC</span><span class="chip">Kafka</span><span class="chip">NATS JetStream</span><span class="chip">WebSocket (Centrifugo)</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Infra</dt>
+                    <dd><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Terraform</span><span class="chip">GitHub Actions</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Observability</dt>
+                    <dd><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">OpenTelemetry</span><span class="chip">ELK</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Security</dt>
+                    <dd><span class="chip">OWASP Top 10</span><span class="chip">OAuth2</span><span class="chip">RBAC</span><span class="chip">SIEM / SOC</span><span class="chip">Trivy</span><span class="chip">Nuclei</span><span class="chip">Gitleaks</span><span class="chip">ZAP</span></dd>
                 </div>
                 <div class="skill-row">
                     <dt>Game</dt>
                     <dd><span class="chip">Nakama</span><span class="chip">WebSocket</span><span class="chip">Unity client integration</span></dd>
-                </div>
-                <div class="skill-row">
-                    <dt>Patterns</dt>
-                    <dd><span class="chip">DDD</span><span class="chip">CQRS</span><span class="chip">Circuit Breaker</span><span class="chip">SAGA</span><span class="chip">Event Sourcing</span></dd>
                 </div>
             </dl>
         </div>
@@ -340,23 +353,73 @@
                 <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
             </div>
             <ol class="timeline">
-                <li>
-                    <h3>Game backends from scratch</h3>
-                    <p>Custom Go backends with no framework for an Android MMORPG and a Gwent-style card game. Real-time state sync over Nakama and WebSocket, Redis resilience patterns, and IAP validation pipelines.</p>
+                <li class="timeline-group">
+                    <h3>Founder &amp; Principal Engineer</h3>
+                    <p class="timeline-meta">Sarana Technology <span>2022 – Present</span></p>
+                    <p>Independent software consultancy. I take contracts as principal engineer or tech lead; the engagements below run through it.</p>
+                    <ol class="timeline-sub">
+                        <li>
+                            <h4>Technical Architect</h4>
+                            <p class="timeline-meta">Sonz.ai <span>Oct 2025 – Jun 2026</span></p>
+                            <ul>
+                                <li>AI companion platform on Nakama and ScyllaDB with tiered LLM routing.</li>
+                                <li>Led a team of 7–10 engineers: sprint planning, hiring, 1:1s, code review standards.</li>
+                                <li>Found and fixed critical production vulnerabilities (auth bypass, CORS misconfiguration, leaked API keys).</li>
+                                <li>Designed the SAGA flow for in-app purchases and subscriptions, ending recurring data-inconsistency incidents.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Tech Lead</h4>
+                            <p class="timeline-meta">Pemerintah Kabupaten Muara Enim <span>Apr 2025 – Oct 2025</span></p>
+                            <ul>
+                                <li>E-government and smart city platform, led a team of 3–4 engineers from architecture to production.</li>
+                                <li>Kubernetes with zero-downtime releases; SPBE security baseline with RBAC and audit logging.</li>
+                                <li>Built an in-house mini SIEM that replaced a paid third-party SIEM.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Principal Engineer</h4>
+                            <p class="timeline-meta">Sangkuriang <span>Aug 2024 – Apr 2025</span></p>
+                            <ul>
+                                <li>Migrated a monolith to Go microservices with DDD, speeding up feature delivery by 50%.</li>
+                                <li>Introduced gRPC internally, cutting end-to-end latency by 60% on critical user journeys.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Backend Principal Engineer</h4>
+                            <p class="timeline-meta">Kipas Kipas <span>Aug 2023 – Mar 2024</span></p>
+                            <ul>
+                                <li>Scaled the social platform backend to 500K+ active users at under 200ms p95.</li>
+                                <li>Doubled throughput with Redis caching and async jobs, postponing an infrastructure upgrade by two quarters.</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </li>
                 <li>
-                    <h3>Laravel to Go migration</h3>
-                    <p>Migrated production systems from Laravel to Go at scale.</p>
+                    <h3>Technical Architect</h3>
+                    <p class="timeline-meta">Simajji SBH SDN <span>May 2021 – Aug 2023</span></p>
+                    <ul>
+                        <li>Designed architecture across several enterprise systems and led a microservices migration that improved performance by 40%.</li>
+                        <li>Standardized code review and release processes across distributed teams.</li>
+                    </ul>
                 </li>
                 <li>
-                    <h3>Hiring pipelines</h3>
-                    <p>Designed take-home assessments and hiring pipelines for backend engineering roles.</p>
+                    <h3>Backend Engineer</h3>
+                    <p class="timeline-meta">Rudex Tech (PT Rudex Teknologi Indonesia) <span>Nov 2018 – Feb 2021</span></p>
+                    <ul>
+                        <li>PHP/Laravel services for SOC tooling, encrypted document management, and smart access and visitor management.</li>
+                        <li>Worked with security engineers and pentesters to fix findings and ship patches.</li>
+                    </ul>
                 </li>
                 <li>
-                    <h3>Sprint demos</h3>
-                    <p>Shipped sprint demos across a Nakama game backend, AI orchestration, and WebSocket services.</p>
+                    <h3>Game Backend Developer</h3>
+                    <p class="timeline-meta">Sintask <span>2014 – 2018, part-time while studying</span></p>
+                    <ul>
+                        <li>Server-side game logic in PHP and MySQL for scoring, leveling and player progression.</li>
+                    </ul>
                 </li>
             </ol>
+            <p class="education"><strong>Education:</strong> Bachelor of Computer Science (S1 Teknik Informatika), Udayana University, 2013 – 2018</p>
         </div>
     </section>
 
@@ -365,7 +428,7 @@
         <div class="container footer-cols">
             <div>
                 <h2 class="footer-heading">Location</h2>
-                <p>Indonesia</p>
+                <p>Depok, West Java<br />Indonesia</p>
             </div>
             <div>
                 <h2 class="footer-heading">Around the Web</h2>
@@ -373,7 +436,7 @@
                     <a class="social-btn" href="https://github.com/bryanwahyu" target="_blank" rel="noopener" aria-label="GitHub">
                         <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                     </a>
-                    <a class="social-btn" href="https://www.linkedin.com/in/bryan-wahyu-2b0360377/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <a class="social-btn" href="https://www.linkedin.com/in/bryan-wahyu-krishnaputra/" target="_blank" rel="noopener" aria-label="LinkedIn">
                         <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M0 1.15C0 .52.52 0 1.18 0h13.64C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.18 1.15H1.18C.52 16 0 15.48 0 14.85V1.15zm4.94 12.24V6.17H2.542v7.22h2.4zm-1.2-8.2c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01zm4.91 8.2V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.03h-.02l.02-.03V6.17h-2.4c.03.68 0 7.22 0 7.22h2.4z"/></svg>
                     </a>
                 </div>
