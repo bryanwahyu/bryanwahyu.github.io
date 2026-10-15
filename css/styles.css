@@ -221,18 +221,8 @@ a {
     height: 15rem;
     border-radius: 50%;
     margin-bottom: 3rem;
-}
-
-.avatar-initials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--navy);
-    border: 0.5rem solid #fff;
-    font-family: var(--heading);
-    font-weight: 700;
-    font-size: 5rem;
-    letter-spacing: 0.02em;
+    object-fit: cover;
+    background: #fff;
 }
 
 .masthead-heading {
@@ -265,10 +255,6 @@ a {
     .avatar {
         width: 11rem;
         height: 11rem;
-    }
-
-    .avatar-initials {
-        font-size: 3.75rem;
     }
 
     .masthead-heading {
