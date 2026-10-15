@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Bryan Wahyu, backend engineer working in Go: game servers, distributed systems, security automation and accessibility tech." />
+    <meta name="author" content="Bryan Wahyu" />
+    <title>Bryan Wahyu</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23118069'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3EBW%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <a class="skip-link" href="#portfolio">Skip to portfolio</a>
+
+    <!-- Navigation-->
+    <nav class="nav" id="mainNav" aria-label="Main">
+        <div class="container nav-inner">
+            <a class="nav-brand" href="#page-top">Bryan Wahyu</a>
+            <button class="nav-toggle" type="button" aria-controls="navLinks" aria-expanded="false">
+                Menu
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M1 3h14M1 8h14M1 13h14" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container masthead-inner">
+            <!-- Placeholder avatar: replace with <img class="avatar" src="assets/img/avatar.jpg" alt="Bryan Wahyu" /> -->
+            <div class="avatar avatar-initials" role="img" aria-label="Bryan Wahyu initials">BW</div>
+            <h1 class="masthead-heading">Bryan Wahyu</h1>
+            <div class="divider divider-light" aria-hidden="true">
+                <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
+            </div>
+            <p class="masthead-subheading">Backend Engineer · Go · Distributed Systems · Game Server Architecture</p>
+        </div>
+    </header>
+
+    <!-- Portfolio-->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <h2 class="section-heading">Portfolio</h2>
+            <div class="divider" aria-hidden="true">
+                <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
+            </div>
+
+            <div class="filters" role="group" aria-label="Filter projects">
+                <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter" data-filter="game" aria-pressed="false">Game Backend</button>
+                <button type="button" class="filter" data-filter="systems" aria-pressed="false">Systems</button>
+                <button type="button" class="filter" data-filter="security" aria-pressed="false">Security</button>
+                <button type="button" class="filter" data-filter="access" aria-pressed="false">Accessibility &amp; AI</button>
+            </div>
+            <p class="filter-status" id="filterStatus" aria-live="polite"></p>
+
+            <ul class="grid" id="portfolioGrid">
+                <li class="tile" data-cat="game">
+                    <button type="button" class="tile-btn" data-project="sand-ai">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">Sand-ai</span>
+                        <span class="tile-desc">Multiplayer game backend with a goroutine battle loop and Redis leaderboard.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Multiplayer game backend written in Go. The battle loop runs on goroutines, the leaderboard lives in Redis, and the domain is organised with DDD.</p>
+                        <p class="stack">Go · Redis · DDD</p>
+                        <a href="https://github.com/bryanwahyu/Sand-ai" target="_blank" rel="noopener">View Sand-ai on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="game">
+                    <button type="button" class="tile-btn" data-project="sonz-ai">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">sonz.AI</span>
+                        <span class="tile-desc">The Sand-ai backend rebuilt on Nakama, with a REST facade.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Sand-ai game backend built on Nakama (Heroic Labs, Apache-2.0): a DDD domain layer, a Nakama runtime module, and a REST facade in front of it.</p>
+                        <p class="stack">Go · Nakama · DDD</p>
+                        <a href="https://github.com/bryanwahyu/sonz.AI" target="_blank" rel="noopener">View sonz.AI on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="systems">
+                    <button type="button" class="tile-btn" data-project="flip">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">flip-style-transfer-engine</span>
+                        <span class="tile-desc">Idempotent interbank transfers with SAGA orchestration and a double-entry ledger.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Idempotent, fault-tolerant interbank transfer service. SAGA orchestration, a double-entry ledger, a transactional outbox and a circuit breaker around the bank calls.</p>
+                        <p class="stack">Go · PostgreSQL · NATS JetStream · Redis</p>
+                        <a href="https://github.com/bryanwahyu/flip-style-transfer-engine" target="_blank" rel="noopener">View flip-style-transfer-engine on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="systems">
+                    <button type="button" class="tile-btn" data-project="emailblast">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">emailblast</span>
+                        <span class="tile-desc">Resumable bulk email sender, benchmarked at 1M recipients.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Resumable bulk email sender with a bounded worker pool, rate limiting, retry and checkpoint resume. Benchmarked at 1M recipients.</p>
+                        <p class="stack">Go · SMTP · SES</p>
+                        <a href="https://github.com/bryanwahyu/emailblast" target="_blank" rel="noopener">View emailblast on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="systems">
+                    <button type="button" class="tile-btn" data-project="js-data-entry">
+                        <span class="tile-lang">Node.js</span>
+                        <span class="tile-name">js-data-entry</span>
+                        <span class="tile-desc">Multi-tenant JSON entry API on Cassandra, one table per query.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Multi-tenant JSON entry API on Cassandra: one table per query, timeuuid clustering, logged-batch writes, and DDD layers kept apart.</p>
+                        <p class="stack">Node.js · Cassandra · Docker</p>
+                        <a href="https://github.com/bryanwahyu/js-data-entry" target="_blank" rel="noopener">View js-data-entry on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="systems">
+                    <button type="button" class="tile-btn" data-project="analyze">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">analyze</span>
+                        <span class="tile-desc">Sales analytics API on the Chinook dataset using window-function SQL.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Go API for sales analytics on the Chinook dataset. Median, mode and share of total are computed with window-function SQL, documented with Swagger.</p>
+                        <p class="stack">Go · MySQL · Swagger</p>
+                        <a href="https://github.com/bryanwahyu/analyze" target="_blank" rel="noopener">View analyze on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="systems">
+                    <button type="button" class="tile-btn" data-project="warehouse">
+                        <span class="tile-lang">PHP</span>
+                        <span class="tile-name">warehouse-with-implement-rabbitmq</span>
+                        <span class="tile-desc">Warehouse and production backend emitting RabbitMQ events on stock movement.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Laravel 10 warehouse and production backend: recipes, production runs, purchase and sales orders, stock history, and RabbitMQ events on every stock movement.</p>
+                        <p class="stack">PHP · Laravel · RabbitMQ</p>
+                        <a href="https://github.com/bryanwahyu/warehouse-with-implement-rabbitmq" target="_blank" rel="noopener">View warehouse-with-implement-rabbitmq on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="systems">
+                    <button type="button" class="tile-btn" data-project="laravel-ddd">
+                        <span class="tile-lang">PHP</span>
+                        <span class="tile-name">Laravel-9-DDD-boilerplates</span>
+                        <span class="tile-desc">Laravel 9 skeleton organised by Domain-Driven Design.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Laravel 9 skeleton organised by Domain-Driven Design: a domain layer with value objects and actions, with framework code moved out to infrastructure.</p>
+                        <p class="stack">PHP · Laravel · DDD</p>
+                        <a href="https://github.com/bryanwahyu/Laravel-9-DDD-boilerplates" target="_blank" rel="noopener">View Laravel-9-DDD-boilerplates on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="security">
+                    <button type="button" class="tile-btn" data-project="automaton-sec">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">automaton-sec</span>
+                        <span class="tile-desc">Security scanning platform orchestrating Trivy, Nuclei, Gitleaks, ZAP and SQLMap.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Security scanning platform that orchestrates Trivy, Nuclei, Gitleaks, ZAP and SQLMap, then runs AI analysis over the findings.</p>
+                        <p class="stack">Go · gRPC · Docker</p>
+                        <a href="https://github.com/bryanwahyu/automaton-sec" target="_blank" rel="noopener">View automaton-sec on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="security">
+                    <button type="button" class="tile-btn" data-project="mini-siem-api">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">mini-siem-api</span>
+                        <span class="tile-desc">Threat detection for brute force, SQLi and XSS, with automatic firewall blocking.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Threat detection engine that spots brute force, SQL injection and XSS in incoming logs and blocks the source at the firewall automatically.</p>
+                        <p class="stack">Go</p>
+                        <a href="https://github.com/bryanwahyu/mini-siem-api" target="_blank" rel="noopener">View mini-siem-api on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="security">
+                    <button type="button" class="tile-btn" data-project="worker-siem">
+                        <span class="tile-lang">Go</span>
+                        <span class="tile-name">worker-siem</span>
+                        <span class="tile-desc">Log-shipping worker for mini-siem-api with at-least-once delivery.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Concurrent log-shipping worker for mini-siem-api: tails logs, normalizes events, and delivers them at least once through a persistent spool.</p>
+                        <p class="stack">Go</p>
+                        <a href="https://github.com/bryanwahyu/worker-siem" target="_blank" rel="noopener">View worker-siem on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="security">
+                    <button type="button" class="tile-btn" data-project="cyber-range-75">
+                        <span class="tile-lang">Docker</span>
+                        <span class="tile-name">cyber-range-75</span>
+                        <span class="tile-desc">Red vs. Blue CTF lab: cookie reuse and MFA bypass, with log forensics.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Red vs. Blue CTF lab covering cookie reuse and MFA bypass. Runs as a Docker Compose stack on Proxmox, with a Node.js target, an XSS path and log forensics for the blue team.</p>
+                        <p class="stack">Docker Compose · Proxmox · Node.js</p>
+                        <a href="https://github.com/bryanwahyu/cyber-range-75" target="_blank" rel="noopener">View cyber-range-75 on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="access">
+                    <button type="button" class="tile-btn" data-project="isyarat">
+                        <span class="tile-lang">Python</span>
+                        <span class="tile-name">app_disabilitas_isyarat_ai</span>
+                        <span class="tile-desc">Sign language recognition (BISINDO/SIBI) for deaf users.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Recognises Indonesian sign language (BISINDO and SIBI) from a camera feed to help deaf users communicate.</p>
+                        <p class="stack">Python · MediaPipe · TensorFlow</p>
+                        <a href="https://github.com/bryanwahyu/app_disabilitas_isyarat_ai" target="_blank" rel="noopener">View app_disabilitas_isyarat_ai on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="access">
+                    <button type="button" class="tile-btn" data-project="mata">
+                        <span class="tile-lang">Python</span>
+                        <span class="tile-name">app_disabilitas_mata_ai</span>
+                        <span class="tile-desc">Assistive app for visually impaired users.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Assistive application for visually impaired users, part of the work behind disabilitasku.id.</p>
+                        <p class="stack">Python</p>
+                        <a href="https://github.com/bryanwahyu/app_disabilitas_mata_ai" target="_blank" rel="noopener">View app_disabilitas_mata_ai on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="access">
+                    <button type="button" class="tile-btn" data-project="tap-to-talk">
+                        <span class="tile-lang">TypeScript</span>
+                        <span class="tile-name">tap-to-talk</span>
+                        <span class="tile-desc">Free, offline-capable tap-to-talk board for non-verbal people.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Free, offline-capable AAC board for non-verbal people. Tap a picture and the app speaks it.</p>
+                        <p class="stack">TypeScript</p>
+                        <a href="https://github.com/bryanwahyu/tap-to-talk" target="_blank" rel="noopener">View tap-to-talk on GitHub</a>
+                    </template>
+                </li>
+                <li class="tile" data-cat="access">
+                    <button type="button" class="tile-btn" data-project="wealth-advisor">
+                        <span class="tile-lang">Python</span>
+                        <span class="tile-name">wealth-advisor</span>
+                        <span class="tile-desc">Multi-agent wealth advisor with anomaly detection and human review.</span>
+                        <span class="tile-caption" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" /></svg></span>
+                    </button>
+                    <template>
+                        <p>Multi-agent wealth advisor assistant: anomaly detection, prioritized recommendations, a human review step, and long-term memory.</p>
+                        <p class="stack">Python · SQLite / ScyllaDB</p>
+                        <a href="https://github.com/bryanwahyu/wealth-advisor" target="_blank" rel="noopener">View wealth-advisor on GitHub</a>
+                    </template>
+                </li>
+            </ul>
+            <p class="grid-empty" id="gridEmpty" hidden>No projects in this category yet. <button type="button" class="link-btn" data-filter="all">Show all projects</button></p>
+        </div>
+    </section>
+
+    <!-- About-->
+    <section class="section section-primary" id="about">
+        <div class="container">
+            <h2 class="section-heading section-heading-light">About</h2>
+            <div class="divider divider-light" aria-hidden="true">
+                <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
+            </div>
+            <div class="about-cols">
+                <p class="lead">I build backend systems from scratch: game servers, security automation tools, and platforms for social impact.</p>
+                <p class="lead">Right now I'm focused on real-time multiplayer infrastructure, AI orchestration, and accessibility tech in Indonesia, including <a href="https://disabilitasku.id" target="_blank" rel="noopener">disabilitasku.id</a>, a platform for people with disabilities.</p>
+            </div>
+            <div class="about-cta">
+                <a class="btn-outline" href="https://github.com/bryanwahyu" target="_blank" rel="noopener">See my code on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills-->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-heading">Skills</h2>
+            <div class="divider" aria-hidden="true">
+                <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
+            </div>
+            <dl class="skills">
+                <div class="skill-row skill-row-main">
+                    <dt>Languages</dt>
+                    <dd><span class="chip chip-strong">Go</span><span class="chip">TypeScript / Node.js</span><span class="chip">Python</span><span class="chip">PHP</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Infra</dt>
+                    <dd><span class="chip">Docker</span><span class="chip">AWS (ECR, ECS)</span><span class="chip">Kubernetes</span><span class="chip">NATS JetStream</span><span class="chip">GitHub Actions</span><span class="chip">GameCI</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Data</dt>
+                    <dd><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Cassandra / ScyllaDB</span><span class="chip">MySQL</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Game</dt>
+                    <dd><span class="chip">Nakama</span><span class="chip">WebSocket</span><span class="chip">Unity client integration</span></dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Patterns</dt>
+                    <dd><span class="chip">DDD</span><span class="chip">CQRS</span><span class="chip">Circuit Breaker</span><span class="chip">SAGA</span><span class="chip">Event Sourcing</span></dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+
+    <!-- Experience-->
+    <section class="section section-tint" id="experience">
+        <div class="container">
+            <h2 class="section-heading">Experience</h2>
+            <div class="divider" aria-hidden="true">
+                <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
+            </div>
+            <ol class="timeline">
+                <li>
+                    <h3>Game backends from scratch</h3>
+                    <p>Custom Go backends with no framework for an Android MMORPG and a Gwent-style card game. Real-time state sync over Nakama and WebSocket, Redis resilience patterns, and IAP validation pipelines.</p>
+                </li>
+                <li>
+                    <h3>Laravel to Go migration</h3>
+                    <p>Migrated production systems from Laravel to Go at scale.</p>
+                </li>
+                <li>
+                    <h3>Hiring pipelines</h3>
+                    <p>Designed take-home assessments and hiring pipelines for backend engineering roles.</p>
+                </li>
+                <li>
+                    <h3>Sprint demos</h3>
+                    <p>Shipped sprint demos across a Nakama game backend, AI orchestration, and WebSocket services.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="container footer-cols">
+            <div>
+                <h2 class="footer-heading">Location</h2>
+                <p>Indonesia</p>
+            </div>
+            <div>
+                <h2 class="footer-heading">Around the Web</h2>
+                <div class="social">
+                    <a class="social-btn" href="https://github.com/bryanwahyu" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    </a>
+                    <a class="social-btn" href="https://www.linkedin.com/in/bryan-wahyu-2b0360377/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M0 1.15C0 .52.52 0 1.18 0h13.64C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.18 1.15H1.18C.52 16 0 15.48 0 14.85V1.15zm4.94 12.24V6.17H2.542v7.22h2.4zm-1.2-8.2c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01zm4.91 8.2V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.03h-.02l.02-.03V6.17h-2.4c.03.68 0 7.22 0 7.22h2.4z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h2 class="footer-heading">Current project</h2>
+                <p><a href="https://disabilitasku.id" target="_blank" rel="noopener">disabilitasku.id</a>, a platform for people with disabilities in Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="container"><small>Copyright &copy; Bryan Wahyu <span id="year">2026</span></small></div>
+    </div>
+
+    <!-- Project modal-->
+    <dialog class="modal" id="projectModal" aria-labelledby="modalTitle">
+        <button type="button" class="modal-close" aria-label="Close">
+            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="2.5" /></svg>
+        </button>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="divider" aria-hidden="true">
+            <span class="divider-line"></span><span class="divider-glyph">{ }</span><span class="divider-line"></span>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <button type="button" class="btn-primary modal-close-btn">Close window</button>
+    </dialog>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
